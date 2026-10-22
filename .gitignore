@@ -1,0 +1,15 @@
+# Local environment, credentials, runtime output and editor state.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+__pycache__/
+*.py[cod]
+node_modules/
+.venv/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Engineering Workflow"
+  short_description: "Risk-scaled development and review quality gates"
+  default_prompt: "Use $engineering-workflow to plan and implement this change within scope, preserving authorization and review quality gates."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Delivery Docs"
+  short_description: "Sync implementation, API, and handoff documents"
+  default_prompt: "Use $project-delivery-docs to synchronize the authorized project documents with actual implementation and verification evidence."

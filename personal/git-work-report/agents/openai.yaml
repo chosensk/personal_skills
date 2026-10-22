@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Work Report"
+  short_description: "Concise author-scoped reports from local Git history"
+  default_prompt: "Use $git-work-report to summarize my Git work for the requested period, with explicit scope and concise business outcomes."

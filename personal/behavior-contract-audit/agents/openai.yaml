@@ -1,0 +1,4 @@
+interface:
+  display_name: "Behavior Contract Audit"
+  short_description: "Compare business behavior and compatibility across changes"
+  default_prompt: "Use $behavior-contract-audit to check whether this change preserves the original business logic and caller compatibility, identifying changes and evidence gaps."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Nacos Release Preflight"
+  short_description: "Read-only environment and configuration preflight"
+  default_prompt: "Use $nacos-release-preflight to compare the requested environments and report evidence-backed configuration blockers without changing or publishing configuration."
