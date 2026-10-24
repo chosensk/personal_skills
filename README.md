@@ -1,13 +1,15 @@
 # Personal Skills
 
-Source collection for five self-authored Codex skills.
+Source collection for six self-authored Codex skills.
 Intended GitHub repository: https://github.com/chosensk/personal_skills
 
 This checkout was cloned from the intended GitHub repository after a temporary
 DNS failure during initial preparation. Git reported an empty repository; no
 existing remote files or project-specific rules were available to reconcile.
-Repository visibility has not been verified. The five skills have been imported
-locally; nothing has been staged, committed or uploaded.
+Repository visibility has not been verified. The first five skills were recorded
+in local commit `1034344`. Word SOP Swimlane was subsequently added locally.
+This preparation workflow has not pushed any commits; remote publication status
+must be checked separately rather than inferred from local commits.
 
 ## Inventory
 
@@ -17,6 +19,7 @@ locally; nothing has been staged, committed or uploaded.
 | Project Delivery Docs | Evidence-grounded progress, API and handoff documents | [personal/project-delivery-docs](personal/project-delivery-docs/SKILL.md) |
 | Git Work Report | Concise author/period reports from local Git history | [personal/git-work-report](personal/git-work-report/SKILL.md) |
 | Behavior Contract Audit | Before/after business behavior and caller compatibility | [personal/behavior-contract-audit](personal/behavior-contract-audit/SKILL.md) |
+| Word SOP Swimlane | Editable swimlane diagrams with source DOCX screenshots and evidence | [personal/word-sop-swimlane](personal/word-sop-swimlane/SKILL.md) |
 | Nacos Release Preflight | Read-only configuration preflight for IoT-Admin-Cloud | [projects/iot-admin-cloud/nacos-release-preflight](projects/iot-admin-cloud/nacos-release-preflight/SKILL.md) |
 
 Each skill directory includes its entrypoint, UI metadata, references and
@@ -51,10 +54,23 @@ Use $engineering-workflow for this cross-module implementation.
 Use $project-delivery-docs to update the requested technical handover.
 Use $git-work-report to summarize the specified author's work last week.
 Use $behavior-contract-audit to compare this change with the agreed baseline.
+Use $word-sop-swimlane to turn the supplied Word SOP into an editable swimlane diagram.
 Use $nacos-release-preflight for an authorized read-only configuration comparison.
 ```
 
 ## Project And Tool Prerequisites
+
+Word SOP Swimlane includes a Python-standard-library DOCX extraction helper.
+Diagram generation/rendering and optional VSDX/WPS validation still require the
+capabilities described in its format reference; they are not bundled generators.
+The extractor covers the main document body and tables, not headers, footers or
+chart rendering. Its current implementation requires the DOCX relationship part
+`word/_rels/document.xml.rels`; documents without it are not supported by this
+helper. The repository copy uses the user's requested output directory, falling
+back to `outputs/` in the current workspace when none is specified. Its original
+client-specific archive name and fixed local path have been removed; the installed
+source copy was not modified. No business documents,
+screenshots or generated diagrams are included in this repository.
 
 Nacos preflight remains project-specific. It reads
 `.qoder/rules/nacos-config-sync.md` from the target IoT-Admin-Cloud project root,
