@@ -21,6 +21,22 @@ Do not change gate classification after failure to obtain a pass. Material scope
 or acceptance changes require the applicable user decision. A documented baseline
 failure explains attribution; it does not silently disable a required gate.
 
+## Proportional Verification And Reuse
+
+Select checks by actual change risk and directly affected behavior. Run the
+smallest meaningful checks that satisfy acceptance and applicable required gates;
+do not run the full suite after every edit or step without a scope-based reason.
+
+Reuse passing results when relevant content, inputs, environment, and check scope
+are unchanged. Rerun only when a relevant change invalidates evidence, a check
+fails and needs resolution, or new concrete risk evidence exposes a coverage gap.
+Rerun or broaden only the affected checks; task length, a new workflow phase, or
+general reassurance alone does not justify repeating completed checks.
+
+This does not waive mandated full-suite/CI/security gates or retry requirements.
+A failed or incomplete check remains unresolved, and evidence with unknown
+relevance cannot be assumed reusable; resolve the specific uncertainty first.
+
 ## Minimal Record
 
 Use native task fields or a compact table with equivalent semantics. Omit fields

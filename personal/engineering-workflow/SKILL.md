@@ -23,6 +23,10 @@ project conventions and focused skills; do not create a second workflow system.
 
 ## Choose The Smallest Sufficient Path
 
+Classify by actual risk and affected contracts. Multiple operational steps alone
+do not make a clear, low-risk task complex. Apply the proportional verification
+and evidence-reuse rules in [gate-evidence.md](references/gate-evidence.md).
+
 | Request | Path |
 | --- | --- |
 | Factual question or discussion | Answer from evidence; no development ceremony |

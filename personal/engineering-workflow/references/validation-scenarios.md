@@ -13,6 +13,9 @@ agents, install tools, or mutate real repositories without applicable permission
 | User asks where the development steps live | Read and answer; no task, specification, or workflow files written |
 | User asks for a plan only | No business code edits or task-record writes without explicit permission |
 | Clear low-risk one-line fix | Minimal acceptance and verification; no forced eight-step artifact set |
+| Clear low-risk task requires several operational steps | Keep the minimal path unless actual risk or affected contracts require more gates |
+| Relevant content, inputs, environment, and check scope remain unchanged at a new phase | Reuse passing evidence; do not rerun checks for reassurance or phase completion alone |
+| A local edit affects one tested behavior while unrelated checks already passed | Rerun dependent checks; retain unrelated evidence; run the full suite only when scope or a required gate warrants it |
 | Single-function ownership or message-delivery change | Classify by risk; apply impact, tests, and security gates despite small size |
 | Multi-module implementation with existing Trellis task | Reuse its authoritative records and project lifecycle; no duplicate OpenSpec PRD |
 | Explicit OpenSpec propose also mentions implementing | Produce authorized proposal artifacts only; stop at the installed native boundary |
