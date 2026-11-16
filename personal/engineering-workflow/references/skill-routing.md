@@ -17,7 +17,8 @@ affect this task; filling templates is separate work.
 | Task lifecycle | Project `trellis-start` / `trellis-continue` | Reuse existing task; honor read-only request boundaries |
 | Clarification | `trellis-brainstorm`, `grill-me`, `grill-with-docs` | Only material questions; documentation writes and invoked tools must be permitted |
 | Specifications | Existing OpenSpec workflow or Trellis artifacts | One authority; OpenSpec propose is planning-only when its installed contract says so |
-| Impact | `gitnexus-exploring`, `gitnexus-impact-analysis` | Required graph gates and UNKNOWN/HIGH/CRITICAL handling cannot be weakened |
+| Code retrieval and impact | CodeGraph MCP or CLI, when available | Check freshness, exact file/signature and affected callers; unresolved results are not an all-clear; see retrieval rules below |
+| Architecture and business navigation | Understand Anything `understand*` skills, when available | Load only for unfamiliar systems or cross-module understanding; graph summaries require current-source corroboration |
 | Planning | `planning-and-task-breakdown` | Reuse tasks; do not introduce repeated approval checkpoints beyond effective policy |
 | Implementation | `trellis-before-dev`; incremental implementation methods | Small tested slices; no automatic commit or clean-worktree completion requirement |
 | Tests | `tdd`, language-specific TDD guidance | Confirm testing boundaries as required; use actual project fixtures and compatible language APIs |
@@ -43,6 +44,48 @@ or bare Mockito fixtures merely because a generic skill demonstrates them.
 Generated domain skills are navigation aids, not authoritative product-boundary
 or quality rules. Reuse helpers only within allowed ownership boundaries; shared
 code is not automatically preferable to independent product-line delivery.
+
+## Understand Anything + CodeGraph Retrieval
+
+Use CodeGraph as the default source/relationship retrieval tool and Understand
+Anything (UA) for on-demand architecture or business navigation. These are roles,
+not bundled dependencies, mandatory calls for every edit, or permission to install.
+
+- Identify actual stack, repository roots and verification commands from project
+  files. Read known files directly; local prose/style changes need no full graph
+  pass. New projects define contracts before there is code to index.
+- With an existing CodeGraph index, check freshness at task start, repository or
+  branch switches, and relevant external changes. Use the current host's tool
+  schema or CLI help; pass each repository's root explicitly for cross-repo work.
+  Refresh only when indicated and authorized. First indexing, full rebuilds and
+  changes to exclusions need an approved scope; installation grants none of these.
+- Reuse fresh, complete, line-numbered source already returned. If broad explore
+  results are noisy, use exact-name lookup and file-scoped symbol reads. Distinguish
+  overloads by signature and line; an unambiguous result need not cover every overload.
+- Before symbol or contract changes, inspect affected callers, consumers and tests.
+  Mark missing or incomplete relationships unresolved; corroborate with scoped
+  source, configuration and tests. Graph absence is not proof of no impact.
+- Across HTTP, messaging, DI, SQL or repository boundaries, check endpoints and
+  rewrites, producers/consumers, actual implementations, mapper statements and
+  payload contracts as applicable. Expand only through task-relevant boundaries.
+- Read UA subgraphs only when useful. Check analyzed revision and working-tree
+  changes, including staged, unstaged and untracked files; a matching commit alone
+  is insufficient. Treat stale summaries as historical candidates, not current facts.
+- First/full UA semantic analysis needs explicit scope, exclusions and model data
+  handling approval, plus actual host capabilities. Missing subagent dispatch is
+  a reported limitation, not permission to install orchestration or claim a full
+  pipeline ran. No implicit hooks, dashboards, output-root/worktree redirects or
+  additional model calls outside the approved analysis.
+- If no usable index/tool exists, report the gap and use scoped source search where
+  policy permits. An unavailable mandatory tool/evidence gate remains blocked;
+  project-specific conflicts require an explicit decision, not silent bypass or
+  reinstalling a retired tool. Do not invent change-detection, taint, rename or
+  risk-field APIs that the active tool does not expose. Graph impact guides test
+  scope but does not replace actual verification.
+
+Stop retrieval once evidence identifies the target, affected boundaries, impact
+and verification path. Report source facts separately from inferred relationships
+and unresolved gaps; broaden only when new evidence warrants it.
 
 ## Known Compatibility Traps
 

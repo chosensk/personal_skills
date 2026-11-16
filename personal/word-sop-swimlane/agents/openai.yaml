@@ -1,6 +1,6 @@
 interface:
-  display_name: "Word SOP 泳道图"
-  short_description: "读取Word业务SOP与截图，生成含系统操作路径、岗位及阶段划分的可编辑泳道图"
-  default_prompt: "使用 $word-sop-swimlane，根据我提供的Word文档生成可编辑SOP泳道图，加入操作路径及对应截图，并按场景归档。"
+  display_name: "业务流程图与 SOP"
+  short_description: "根据业务描述、文档或已有图制作可编辑流程图，支持泳道、审批及 SOP 截图"
+  default_prompt: "使用 $word-sop-swimlane，根据我提供的业务材料生成清晰、可编辑的业务流程图。"
 policy:
   allow_implicit_invocation: true

@@ -40,10 +40,12 @@ are reflected in acceptance, not only in conversation history.
 ## 3. Analyze Impact And Establish A Baseline
 
 Trace callers, affected consumers, storage, messages, ownership/tenant boundaries,
-and failure paths. Where project rules require GitNexus, use graph exploration
-and pre-edit impact with index-freshness gates. Report HIGH/CRITICAL risk before
-editing; UNKNOWN remains unresolved and requires corroboration. Do not substitute
-text search for a required graph gate or silently bypass unavailable tooling.
+and failure paths. Follow [retrieval rules](skill-routing.md#understand-anything--codegraph-retrieval):
+CodeGraph for current source relationships and pre-edit impact, Understand Anything
+for on-demand architecture navigation. Preserve project-specific evidence gates;
+check freshness and corroborate unresolved relationships. Report high-risk impact
+before editing without assuming any tool exposes standardized risk labels or
+complete runtime flows. Unavailable mandatory tooling blocks its dependent gate.
 
 Identify existing failures and dirty paths without attributing them to this task.
 Run proportional baseline checks where practical; record when a baseline cannot
@@ -144,7 +146,10 @@ optimization. Resolve finding dispositions and re-review affected changes.
 Report implemented/verified/reviewed status separately. Block release-readiness
 claims if mandatory evidence is missing. Do not require a clean worktree to
 deliver; do not archive, commit, publish, merge, or push as implicit cleanup.
-When explicitly authorized to commit, also perform required graph-change checks.
+Before handoff, account for staged, unstaged and untracked changes, affected
+contracts/callers and verification evidence. When explicitly authorized to commit,
+also perform project-required change checks using actual available capabilities;
+do not assume the retrieval tool implements a dedicated diff-analysis API.
 Archive only within the applicable lifecycle policy and current authorization.
 
 Gate: all required current-content checks passed, applicable conditional gates

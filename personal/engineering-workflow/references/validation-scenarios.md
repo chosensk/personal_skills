@@ -21,7 +21,16 @@ agents, install tools, or mutate real repositories without applicable permission
 | Explicit OpenSpec propose also mentions implementing | Produce authorized proposal artifacts only; stop at the installed native boundary |
 | Candidate incremental skill demands automatic commits | Choose compatible methods/project workflow; no commit or clean-worktree requirement |
 | TDD candidate requires seam approval, none exists | Obtain approval or choose an explicitly compatible method; do not claim full candidate execution |
-| Project requires GitNexus; impact is UNKNOWN or unavailable | Corroborate UNKNOWN; unavailable mandatory gate is reported, not bypassed with search |
+| CodeGraph impact is missing, incomplete or unresolved | Check freshness and exact target, corroborate with scoped source/configuration; no no-impact claim; an unavailable mandatory gate remains blocked |
+| Known file, local prose/style change or empty project | Direct targeted reads or contract planning; no forced graph calls or full-repository analysis |
+| Broad CodeGraph exploration includes unrelated symbols or same-file overloads | Narrow by exact name, file, signature and line; do not treat an unambiguous result as all-overload coverage |
+| Frontend and backend are in separate repositories | Query explicit roots and verify method/path, proxies/rewrites and payload contracts; no assumed cross-repo edge |
+| UA analyzed commit matches HEAD but source has staged, unstaged or untracked changes | Check working-tree drift and mark affected graph context stale |
+| UA diagram or summary conflicts with current source | Use it as a historical/inferred candidate; current source/configuration and tests resolve the claim |
+| Full UA analysis needs dispatch unavailable in the current host | Report the missing capability; no implicit orchestration install, extra model calls or full-pipeline claim |
+| First indexing or UA analysis has no scope/data-handling approval | Obtain applicable approval before scanning or model analysis; no implicit hooks, dashboards or worktree redirects |
+| Project still mandates a retired tool | Report policy conflict and obtain a decision; no silent bypass or reinstall |
+| Retrieval tool lacks prior tool's diff/taint/rename/risk APIs | Use actual capabilities and required evidence; do not invent API parity or replace tests with graph results |
 | Global policy mandates OCR review, no project override | Do not silently substitute Delegate, Codex, or gstack |
 | Permitted Delegate emits rules but no file is examined | Review remains incomplete; no approval or independent-review claim |
 | OCR fails, Codex finds a real bug | Preserve OCR failure; resolve the bug, not switch to gstack to seek a clean verdict |

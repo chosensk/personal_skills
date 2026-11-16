@@ -78,10 +78,18 @@ plus applicable project instructions and authorized environment evidence. Those
 rules and live configuration are intentionally not copied here. Missing required
 rules or target identity block the dependent checks; never guess them.
 
+Engineering Workflow uses **CodeGraph** for routine source/relationship retrieval
+and pre-edit impact, plus **Understand Anything** for on-demand architecture and
+business navigation. Known-file edits do not require both tools. Freshness,
+scoped fallback, cross-boundary evidence, and analysis permissions are defined in
+[the retrieval rules](personal/engineering-workflow/references/skill-routing.md#understand-anything--codegraph-retrieval).
+This is a workflow convention, not bundled tools or a guarantee of complete graphs.
+
 Other skills defer to effective host/project policy. This collection does not
-install OCR, Codex CLI, gstack, GitNexus, parsers or any other tool. Missing selected
-skills follow the workflow's consent/substitution protocol. Mandatory evidence and
-review gates remain mandatory; no automatic agents, commits or publication.
+install CodeGraph, Understand Anything, OCR, Codex CLI, gstack, parsers or any
+other tool. Missing selected skills follow the workflow's consent/substitution
+protocol. Mandatory evidence and review gates remain mandatory; no automatic
+agents, commits or publication.
 
 ## Keep One Maintained Source
 

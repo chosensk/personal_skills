@@ -2,15 +2,15 @@
 
 ## 共用模型
 
-先建立与格式无关的数据：`lanes`、`stages`、`nodes`、`edges`。节点记录 `id`、`lane`、`stage`、`title`、`actions`、`system_path`、`controls`、`evidence_blocks`、`image_ids`、`responsibility_status`；边记录源节点、目标节点及是否待补。根据截图原始比例计算节点高度，再取同一阶段各泳道所需高度的最大值。实际节点与阶段数量来自文档，不硬编码销售管理案例。
+先建立与格式无关的数据：`nodes`、`edges`，以及适用时的 `lanes`、`stages`。节点记录 `id`、`title`、`actions` 和来源；根据材料补充 `lane`、`stage`、`system_path`、`controls`、`image_ids`、`responsibility_status`。边记录源节点、目标节点、分支条件及是否待补。存在截图时按原始比例计算节点尺寸；存在泳道阶段时取同一阶段各泳道所需高度的最大值。图型、节点及阶段数量来自任务，不硬编码案例。
 
 ## drawio
 
-生成UTF-8 mxfile / diagram / mxGraphModel / root结构，包含id=0和parent=0的id=1基础cell。每个节点为可编辑的mxCell；文字与图片可以作为节点的子cell，使移动节点时跟随。图片使用 `shape=image;imageAspect=0;aspect=fixed;image=data:image/png,<base64>;`（drawio这种image值无 `;base64` 标记），mxGeometry存储位置与尺寸。保留图内独立节点和source/target连接，不能仅嵌入完整SVG截图。几何与连线用同一份模型生成，避免预览图与源文件流程不一致。
+生成UTF-8 mxfile / diagram / mxGraphModel / root结构，包含id=0和parent=0的id=1基础cell。每个节点为可编辑的mxCell；文字与图片可以作为节点的子cell，使移动节点时跟随。图片用 `shape=image;imageAspect=0;aspect=fixed` 和匹配原始格式的data URI嵌入，例如PNG用 `image=data:image/png,<base64>;`，JPEG用 `image=data:image/jpeg,<base64>;`（drawio这种image值无 `;base64` 标记）；mxGeometry存储位置与尺寸。保留图内独立节点和source/target连接，不能仅嵌入完整SVG截图。几何与连线用同一份模型生成，避免预览图与源文件流程不一致。
 
 ## VSDX
 
-用户要求WPS导入VSDX时，优先使用当前环境已验证的生成器或合法模板。没有生成能力时如实交付drawio，不把SVG/ZIP改后缀伪装成VSDX。不将含内部数据的文件上传到外部转换服务。
+用户要求VSDX时，优先使用当前环境已验证的生成器或合法模板。没有生成能力时如实交付drawio并说明VSDX未生成，不把SVG/ZIP改后缀伪装成VSDX。不将含内部数据的文件上传到外部转换服务。
 
 若直接写OOXML包：使用Visio 2012 namespace，保留有效的document、styles、pages及其package relationships。PageWidth/PageHeight匹配画布；坐标转换注意Visio的Y轴方向。Shape子元素顺序为Cell、Section、Text或ForeignData等，不能将Cell写到Text后面。
 
@@ -23,6 +23,6 @@
 
 ## 预览与校验
 
-SVG图片使用 `data:image/png;base64,...` 自包含URI。以依赖工具返回的Node与sharp渲染PNG，适当设置大画布限制，保留截图原始字节；阶段裁切保留岗位列头。所有阶段都应查看，完整图核查跨阶段连线。
+有嵌入截图时，SVG图片使用与原始格式匹配的自包含data URI。需要PNG时可用依赖工具返回的Node与sharp渲染，适当设置大画布限制；泳道阶段裁切保留岗位列头。查看完整图和所有已生成分图，核查跨阶段连线。
 
-结构校验至少包括：所有节点ID唯一、连线端点存在、节点不越所属阶段、各图片引用有效、VSDX所有非外部relationship目标在ZIP中存在、每份嵌入图片的SHA256与提取图片一致。保留图片映射与待确认项说明即可，无需把分析日志全部交付。
+结构校验至少包括所有节点ID唯一、连线端点存在；有阶段时检查节点不越所属阶段，有图片时检查引用及来源映射，有VSDX时检查所有非外部relationship目标在ZIP中存在。优先保留图片原始字节并比较嵌入内容与来源的SHA256；格式不支持而必须转换时，保留来源与转换后文件的映射及各自哈希，核查尺寸比例、内容与标注，说明转换，不能声称字节一致。保留适用的图片映射与待确认项说明，无需把分析日志全部交付。
