@@ -1,15 +1,8 @@
 # Personal Skills
 
-Source collection for six self-authored Codex skills.
-Intended GitHub repository: https://github.com/chosensk/personal_skills
-
-This checkout was cloned from the intended GitHub repository after a temporary
-DNS failure during initial preparation. Git reported an empty repository; no
-existing remote files or project-specific rules were available to reconcile.
-Repository visibility has not been verified. The first five skills were recorded
-in local commit `1034344`. Word SOP Swimlane was subsequently added locally.
-This preparation workflow has not pushed any commits; remote publication status
-must be checked separately rather than inferred from local commits.
+Source collection for personal Codex skills. Repository:
+https://github.com/chosensk/personal_skills. Check Git status and the remote for
+current publication state; local files alone do not establish what is published.
 
 ## Inventory
 
@@ -19,11 +12,12 @@ must be checked separately rather than inferred from local commits.
 | Project Delivery Docs | Evidence-grounded progress, API and handoff documents | [personal/project-delivery-docs](personal/project-delivery-docs/SKILL.md) |
 | Git Work Report | Concise author/period reports from local Git history | [personal/git-work-report](personal/git-work-report/SKILL.md) |
 | Behavior Contract Audit | Before/after business behavior and caller compatibility | [personal/behavior-contract-audit](personal/behavior-contract-audit/SKILL.md) |
-| Word SOP Swimlane | Editable swimlane diagrams with source DOCX screenshots and evidence | [personal/word-sop-swimlane](personal/word-sop-swimlane/SKILL.md) |
+| Word SOP Swimlane | Editable business flowcharts and SOP diagrams, with optional source screenshots | [personal/word-sop-swimlane](personal/word-sop-swimlane/SKILL.md) |
+| PostgreSQL Growth Diagnosis | Cost-aware read-only table growth and retention diagnosis | [personal/postgresql-growth-diagnosis](personal/postgresql-growth-diagnosis/SKILL.md) |
 | Nacos Release Preflight | Read-only configuration preflight for IoT-Admin-Cloud | [projects/iot-admin-cloud/nacos-release-preflight](projects/iot-admin-cloud/nacos-release-preflight/SKILL.md) |
 
-Each skill directory includes its entrypoint, UI metadata, references and
-maintenance scenarios. Scenario descriptions are not evidence of executed tests.
+Each skill directory includes an entrypoint and resources suited to its scope.
+Scenario descriptions are not evidence of executed tests.
 Original authoring assessments describe their stated historical versions only.
 
 Third-party skills, plugin caches, conversation histories, configuration exports,
@@ -54,6 +48,7 @@ Use $engineering-workflow for this cross-module implementation.
 Use $project-delivery-docs to update the requested technical handover.
 Use $git-work-report to summarize the specified author's work last week.
 Use $behavior-contract-audit to compare this change with the agreed baseline.
+Use $postgresql-growth-diagnosis to investigate PostgreSQL table growth.
 Use $word-sop-swimlane to turn the supplied Word SOP into an editable swimlane diagram.
 Use $nacos-release-preflight for an authorized read-only configuration comparison.
 ```
@@ -93,25 +88,19 @@ agents, commits or publication.
 
 ## Keep One Maintained Source
 
-Once this collection has been reconciled with the remote and adopted, maintain
+Maintain
 the skill instructions here and deploy approved updates to discovery locations.
 Installed directories are runtime copies, not a second independent source.
 If an installed copy was edited, compare and bring the intended changes back here
-before deployment; do not blindly sync either direction. No automatic sync,
-symlinks, filesystem permissions or existing installations were changed during
-preparation. No deployment has been performed from this collection yet.
-
-Preparation preserved all original skill files. The repository copy of the Nacos
-entrypoint changes only its external project-rule pointer so it does not become a
-broken relative link in this layout; its project-rule requirement is unchanged.
+before deployment; do not blindly sync either direction. Verify the actual
+installation and discovery state for each target rather than inferring it.
 
 ## Connect To GitHub Safely
 
 This directory is already a clone of the intended repository. Before staging,
 check the remote again if time has passed or someone else may have added content.
 Reconcile new remote history and instructions rather than overwriting them.
-Confirm repository visibility and the intended initial branch before the first
-publication; do not assume that an empty repository is private.
+Confirm repository visibility before publication; do not assume it is private.
 
 Review the exact diff and private/project-specific material before committing.
 Committing requires explicit applicable authorization; remote push remains a

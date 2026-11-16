@@ -33,6 +33,16 @@ For changed branches, include normal, empty/null/invalid, boundary, and failure
 inputs as applicable. Follow directly affected side effects across module edges
 without converting a scoped audit into unrelated cleanup.
 
+For cross-service submission and recovery, trace the business identity and tenant,
+request lifecycle, transaction and lock boundaries, and the durable outcome on
+both sides. A timeout or a single empty lookup does not prove that a request has
+ended: the original request may arrive or complete later. Compare duplicate and
+late-request behavior, concurrent retries, response loss after success, dependent
+service unavailability, and reconciliation of inconsistent results. Check the
+actual idempotency mechanism and its scope; a retry button or a lock alone does not
+prove at-most-once effects. Keep unresolved outcomes explicit and distinguish
+unit/concurrency tests from an end-to-end recovery observed in the target runtime.
+
 ## Evidence And Verdict
 
 Use a compact record per material contract:

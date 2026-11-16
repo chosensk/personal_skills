@@ -9,6 +9,7 @@ walkthrough results separately; these expected decisions are not executed tests.
 | Same signature, but null becomes zero and denominator includes invalid samples | Classify observable aggregation changes; check requirements and affected callers |
 | Refactor preserves common inputs but shifts midnight attribution from event to receipt time | Report date-boundary change and timezone inputs; no blanket unchanged claim |
 | Duplicate-message suppression added as a bug fix | Label boundary correction as behavior change; verify approval and idempotency expectations |
+| Submission times out, lookup is empty, and the original request is delayed | Treat the outcome as unknown; trace late completion, retry concurrency and the actual idempotency boundary before claiming recovery is safe |
 | Required graph tool returns UNKNOWN and normal-path tests pass | Retain unresolved impact/coverage limits; do not infer universal compatibility |
 | Cat-litter alarm now routes via another health product service | Check product isolation and affected message contracts; do not justify it solely by code reuse |
 | User asks for read-only compatibility analysis; a defect is found | Return evidence and proposed correction without auto-fix, replay, or configuration changes |

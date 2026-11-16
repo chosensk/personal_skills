@@ -31,6 +31,10 @@ affect this task; filling templates is separate work.
 | Nacos release configuration preflight | Project `nacos-release-preflight`, when available | Read-only scoped environment comparison; no implicit config writes/publication or business-readiness claim |
 | Author/period Git work report | `git-work-report`, when available | Explicit identity, ref, timezone/date basis; local read-only evidence, no deployment inference or implicit publication |
 | Behavior preservation / compatibility comparison | `behavior-contract-audit`, when available | Reliable before-state, observable contracts and authorized differences; contributes checks without replacing formal review |
+| PostgreSQL table growth | `postgresql-growth-diagnosis`, when available | Read-only, cost-aware investigation; no implicit maintenance or data changes |
+
+For overlay styling, BPM status or configuration-source diagnosis, consult
+[runtime-diagnosis.md](runtime-diagnosis.md) only when that specific symptom applies.
 
 Choose no more than the applicable per-stage skill budget. With this router and
 one project skill active, add at most one specialist under the default budget.
