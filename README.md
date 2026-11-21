@@ -12,6 +12,7 @@ current publication state; local files alone do not establish what is published.
 | Project Delivery Docs | Evidence-grounded progress, API and handoff documents | [personal/project-delivery-docs](personal/project-delivery-docs/SKILL.md) |
 | Git Work Report | Concise author/period reports from local Git history | [personal/git-work-report](personal/git-work-report/SKILL.md) |
 | Behavior Contract Audit | Before/after business behavior and caller compatibility | [personal/behavior-contract-audit](personal/behavior-contract-audit/SKILL.md) |
+| Prompt Router | Selects and applies a user-maintained prompt template based on the conversation | [personal/prompt-router](personal/prompt-router/SKILL.md) |
 | Word SOP Swimlane | Editable business flowcharts and SOP diagrams, with optional source screenshots | [personal/word-sop-swimlane](personal/word-sop-swimlane/SKILL.md) |
 | PostgreSQL Growth Diagnosis | Cost-aware read-only table growth and retention diagnosis | [personal/postgresql-growth-diagnosis](personal/postgresql-growth-diagnosis/SKILL.md) |
 | Nacos Release Preflight | Read-only configuration preflight for IoT-Admin-Cloud | [projects/iot-admin-cloud/nacos-release-preflight](projects/iot-admin-cloud/nacos-release-preflight/SKILL.md) |
